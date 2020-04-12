@@ -6,6 +6,8 @@ exports.up = function(knex) {
       .unique();
       users.string("password", 64)
       .notNullable();
+      users.string("zip", 64)
+      .notNullable()
     })
   };
   

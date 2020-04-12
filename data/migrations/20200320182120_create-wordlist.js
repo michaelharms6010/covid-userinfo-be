@@ -3,9 +3,14 @@ exports.up = function(knex) {
   return knex.schema.createTable('health_data', healthData => {
     healthData.increments();
     
-    healthData.string('health_data', 2048)
+    healthData.decimal('temperature')
       .notNullable()
-      healthData.integer('user_id')
+    healthData.boolean("lost_sense_of_smell")
+    healthData.boolean("cough")
+    healthData.boolean("tight_chest")
+    healthData.boolean("aches")
+    healthData.integer('symptom_count')
+    healthData.integer('user_id')
       .unsigned()
       .notNullable()
       .references('id')
