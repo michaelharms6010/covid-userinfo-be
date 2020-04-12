@@ -5,7 +5,7 @@ const morgan = require("morgan");
 
 const userRouter = require("./users/users-router")
 const authRouter = require("./auth/auth-router")
-const wordlistsRouter = require("./wordlists/wordlists-router")
+const healthdataRouter = require("./health_data/healthdata-router")
 
 const server = express();
 
@@ -16,7 +16,7 @@ server.use(morgan("dev"));
 
 server.use("/auth", authRouter)
 server.use("/users", userRouter)
-server.use("/wordlists", wordlistsRouter)
+server.use("/healthdata", healthdataRouter)
 
 server.get("/", (req,res) => {
     res.json({message: "Server is up and running"})

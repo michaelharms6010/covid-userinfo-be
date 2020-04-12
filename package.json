@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/pt11-word-find/back-end#readme",
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.3"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
